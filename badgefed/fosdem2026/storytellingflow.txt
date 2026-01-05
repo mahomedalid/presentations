@@ -14,7 +14,9 @@ While nonprofits tackle many challenges, the most demanding aspects are
 
 My passion lay in technology, and as CTO, I believed I could contribute meaningfully to our strategic direction. We had exciting projects on the horizon, but most of our work involved maintaining existing systems—websites, content creation for hackathons, and building community tools like interview simulators and mentorship platforms. We also connected with tech industry insiders to organize meetups and conferences featuring compelling technical topics.
 
-Soon, we realized that all these activities would benefit from digital credentials and recognition. Speakers at our events deserved acknowledgment. Volunteers needed recognition for their contributions. Hackathon participants required skill verification for completing challenges. Mentors and mentees earned credentials upon completing their tenure. When we researched established credentialing systems, Credly by Pearson emerged as the market leader. We reached out to them and received a substantial quote that was far beyond our capabilities—let's just say it had more zeros than our annual budget had dollars.
+Soon, we realized that all these activities would benefit from digital credentials and recognition. 
+
+Speakers at our events deserved acknowledgment. Volunteers needed recognition for their contributions. Hackathon participants required skill verification for completing challenges. Mentors and mentees earned credentials upon completing their tenure. When we researched established credentialing systems, Credly by Pearson emerged as the market leader. We reached out to them and received a substantial quote that was far beyond our capabilities—let's just say it had more zeros than our annual budget had dollars.
 
 As CTO, I had an idea: "Why don't we build our own?" At the time, I had a vague understanding of OpenBadges and was confident we could create a website with cryptographic verification for credentials. (Famous last words of every developer ever, right?) If OpenBadges didn't meet our needs, we could build something simpler.
 

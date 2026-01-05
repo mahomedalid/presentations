@@ -59,7 +59,10 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 <!-- transition: fade -->
 
-**CTO focus:**
+<!-- _class: none -->
+
+## My focus as CTO:
+
 - 🌐 Maintaining websites and systems
 - 🎯 Content creation for hackathons  
 - 🔧 Building community tools (interview simulators, mentorship platforms)
@@ -69,8 +72,10 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ---
 
+<!-- _class: none -->
 
-**CTO focus:**
+## My focus as CTO:
+
 - 🌐 Maintaining websites and systems
 - 🎯 Content creation for hackathons  
 - 🔧 Building community tools (interview simulators, mentorship platforms)
@@ -81,13 +86,9 @@ footer: 'FOSDEM 2025 | badgefed.org'
 ---
 
 <!-- _transition: none -->
+<!-- _class: none -->
 
-
----
-
-# BadgeFed: Modern Features Demo\n\n<!-- _class: lead -->\n<!-- _backgroundColor: #1a1a2e -->\n\n## Code Example\n\n```csharp\n// ActivityPub Badge Creation\npublic async Task<Badge> CreateBadgeAsync(string badgeClassId)\n{\n    var badge = new OpenBadge {\n        Type = \"Achievement\",\n        BadgeClass = badgeClassId,\n        Recipient = recipient.Email\n    };\n    \n    return await _badgeService.IssueAsync(badge);\n}\n```\n\n> **Pro Tip:** *Combining ActivityPub + OpenBadges = Federation Magic* ✨\n\n---\n\n# The Need: Everyone Deserves Recognition
-
-<!-- _backgroundColor: #0f3460 -->
+# Everyone Deserves Recognition
 
 **Who needed badges?**
 - 🎤 **Speakers** at our events deserved acknowledgment
@@ -97,85 +98,158 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ---
 
-**The Research:** *Credly by Pearson was the market leader*
+<!-- _class: lead -->
 
-**The Reality:** Proprietary platform with **vendor lock-in and no federation** 🔒
-
-> *"Communities deserve interoperable, self-hosted solutions"*
+![bg center: 60%](imgs/credo.png)
 
 ---
 
-# The Backburner: When Good Ideas Wait
+<!-- _class: lead -->
 
-![bg center 80%](good-idea-waiting.png)
-
-<!-- Alt text for image generation: A lightbulb with a badge/credential icon inside it, sitting on a shelf labeled 'back burner' collecting dust, with a long priority list on a clipboard in the foreground showing 20-30 items, clock showing limited time, conveying frustration of having a solution but no resources to implement, warm lighting with a sense of waiting -->
+![bg center: 60%](imgs/elon.png)
 
 ---
 
-# The Discovery: My ActivityPub Journey
+<!-- _class: lead -->
 
-![bg center 85%](activitypub-discovery-moment.png)
-
-<!-- Alt text for image generation: A person at their computer with an expression of sudden realization and excitement, screen showing a blog connecting to a network of federated nodes, Twitter bird transforming into Mastodon elephant, network visualization with interconnected servers and data flowing between them, moment of discovery with bright enlightening colors, tech enthusiasm and breakthrough feeling -->
+![bg center: 40%](imgs/viralfediverse.png)
 
 ---
 
-# The Decision: BadgeFed is Born
+<!-- _class: lead -->
 
-Armed with knowledge and a clear project vision—**something that wasn't just another social network clone**—I decided to create **BadgeFed**.
-
-**Due Diligence Check:**
-- 🔍 Found **ActivityBadges** (existing solution)
-- 🛠️ Attempted setup and thorough exploration
-- ❌ **Not ready** for SOMOS.tech's technology stack
-
-**Solution:** Combine two powerful technologies: **ActivityPub + OpenBadges**
+![bg center: 60%](imgs/activitybadges.png)
 
 ---
 
-# Confession Time: The .NET Choice
+<!-- _class: lead -->
 
-![bg center 75%](dotnet-love-confession.png)
-
-<!-- Alt text for image generation: A person sheepishly holding up a .NET logo with hearts floating around it, while standing in front of a crowd of penguin mascots (Linux) and other open source logos looking skeptical but amused, conveying vulnerability and humor about loving .NET in the fediverse community, light-hearted and endearing confession moment -->
+![bg center: 40%](imgs/confession.gif)
 
 ---
 
-# How BadgeFed Works: Technical Deep Dive
+<!-- _class: lead -->
+
+![bg center: 40%](imgs/dotnet.png)
+
+---
+
+<!-- _class: lead -->
+
+![bg center: 60%](imgs/standards.png)
+
+---
+
+<!-- _class: lead -->
+
+![bg center: 60%](imgs/apob.png)
+
+---
+
+<!-- _class: lead -->
+
+![bg center: 60%](imgs/apob1.png)
+
+---
+
+<!-- _class: none -->
 
 ```json
 {
-  "@context": "https://www.w3.org/ns/activitystreams",
-  "id": "https://badges.somos.tech/grant/123",
-  "type": "Note",
-  "content": "🏅 SOMOS.tech Community Leader Badge awarded to @maria",
-  "attributedTo": "https://badges.somos.tech/actors/somos.tech",
-  "attachment": [{
+  "@context": "https://w3id.org/openbadges/v2",
+  "type": "Assertion",
+  "id": "https://badges.vocalcat.com/openbadge/badgesvocalcatcom_5_8_2f1bbe7477c80c1ff0100c86c31c0289",
+  "recipient": {
+    "type": "url",
+    "identity": "https://hachyderm.io/@mapache",
+    "hashed": false
+  },
+  "badge": {
     "@context": "https://w3id.org/openbadges/v2",
-    "type": "Assertion",
-    "recipient": { "type": "url", "identity": "https://mastodon.social/@maria" },
-    "badge": "https://badges.somos.tech/badges/community-leader",
-    "verification": { "type": "HostedBadge" },
-    "issuedOn": "2025-02-01T10:00:00Z"
-  }]
+    "type": "BadgeClass",
+    "id": "https://badges.vocalcat.com/openbadge/class/8",
+    "name": "\uD83D\uDEE0\uFE0F Code Contributor \u2013 Badgefed",
+    "description": "You\u0027ve r...",
+    "image": "https://badges.vocalcat.com/uploads/badges/addf70b5-ca5e-4d84-8a2b-88c40d6314da.png",
+    "criteria": {
+      "narrative": "Must have at least 1 merged Pull Request..."
+    },
+    "issuer": {
+      "@context": "https://w3id.org/openbadges/v2",
+      "type": "Profile",
+      "id": "https://badges.vocalcat.com/openbadge/issuer/badges.vocalcat.com/badgefed",
+      "name": "BadgeFed",
+      "url": "https://badges.vocalcat.com/actors/badges.vocalcat.com/badgefed",
+      "email": "badgefed@badges.vocalcat.com"
+    }
+  },
+  "verification": {
+    "type": "hosted"
+  },
+  "issuedOn": "2025-04-11T17:06:11Z",
+  "evidence": [
+    {
+      "type": "Evidence",
+      "id": "https://badges.vocalcat.com/view/grant/badgesvocalcatcom_5_8_2f1bbe7477c80c1ff0100c86c31c0289",
+      "narrative": "This badge was issued through BadgeFed, a decentralized badge issuing platform using ActivityPub."
+    }
+  ]
 }
 ```
 
 ---
 
+<!-- _class: none -->
+
+```json
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "https://badges.vocalcat.com/grant/badgesvocalcatcom_72_11_89fb419013f52130e83e223663906b6b",
+  "type": "Note",
+  "content": "<h1>BadgeFed Unconfe...",
+  "url": "https://badges.vocalcat.com/grant/badgesvocalcatcom_72_11_89fb419013f52130e83e223663906b6b",
+  "attributedTo": "https://badges.vocalcat.com/actors/badges.vocalcat.com/badgefed", <--- 
+  "attachment": [
+    {
+        "@context": "https://w3id.org/openbadges/v2",
+        "type": "Assertion",
+        "id": "https://badges.vocalcat.com/grant/badgesvocalcatcom_72_11_89fb419013f52130e83e223663906b6b/assertion",
+        ...
+        "issuer": {
+          "@context": "https://w3id.org/openbadges/v2",
+          "type": "Profile",
+          "id": "https://badges.vocalcat.com/openbadge/issuer/badges.vocalcat.com/badgefed", 
+          "name": "BadgeFed",
+          "url": "https://badges.vocalcat.com/actors/badges.vocalcat.com/badgefed", <--- 
+          "email": "badgefed@badges.vocalcat.com"
+        }
+    }
+  ],
+  "to": [
+    "https://www.w3.org/ns/activitystreams#Public",
+```
+
+---
+
+
+<!-- _class: none -->
+
 # The Magic: Social Credentials
 
 **Simple approach unlocks tremendous possibilities:**
 
-- 👥 **Issuers can be followed** (ActivityPub verb)
-- 💬 **Badges can be commented on** (replies)
-- 🔄 **Shared, reposted, boosted** (social dynamics)
-- 💭 **Even quoted** (social proof)
+- 👥 **Issuers can be followed** (Actors + ActivityPub verb)
+- 💬 **Badges can be commented on** (Reply)
+- 🔄 **Shared/boosted, liked** (Announce, Like)
+- 💭 **Even quoted** (Quote)
 
 **We've added all the social dynamics to credentials!**
 
-*When an issuer posts a badge, other issuers receive those notes, and voilà! Decentralized badges.*
+---
+
+### When an issuer posts a badge, 
+## other issuers receive those notes, 
+## and voilà! Decentralized badges.*
 
 ---
 
@@ -193,6 +267,25 @@ Armed with knowledge and a clear project vision—**something that wasn't just a
 
 ---
 
+# The Wallet Revolution: Own Your Credentials
+
+**Decentralized credential storage:**
+- 📱 **Smartphone app** or self-hosted system
+- 🏠 **Your domain, your control**
+- 💾 **Persistent copies** even if issuers disappear
+- 🔍 **Single verification point** for employers
+
+**Unlike Mozilla Backpack:** Fully decentralized within the fediverse
+
+**The Game Changer:** Any Mastodon user can issue badges using existing APIs
+
+--- 
+
+# Real Impact: Not a Proof of Concept
+
+
+--- 
+
 # Security & Trust: Triple Verification
 
 ## **Comprehensive Security Model**
@@ -208,60 +301,7 @@ Armed with knowledge and a clear project vision—**something that wasn't just a
 
 ---
 
-# Real Impact: Not a Proof of Concept
-
-![bg center 90%](real-impact-production.png)
-
-<!-- Alt text for image generation: Split screen showing expensive Credly interface with $3000 price tag on left, versus happy diverse community members sharing badges on social media feeds on right, with counter showing 150+ and 89+ badges, people celebrating achievements, badges flowing through federated network, real community impact with authentic joy and social sharing, production-ready system in action -->
-
----
-
-# The Wallet Revolution: Own Your Credentials
-
-**Decentralized credential storage:**
-- 📱 **Smartphone app** or self-hosted system
-- 🏠 **Your domain, your control**
-- 💾 **Persistent copies** even if issuers disappear
-- 🔍 **Single verification point** for employers
-
-**Unlike Mozilla Backpack:** Fully decentralized within the fediverse
-
-**The Game Changer:** Any Mastodon user can issue badges using existing APIs
-
----
-
-# Live Demo: See Federation in Action
-
-## **Real-Time Badge Issuance Flow**
-
-**Let's demonstrate:**
-1. 🏅 **Create badge class** - "FOSDEM 2025 Attendee" 
-2. 🎯 **Issue to recipient** - Mention @username
-3. 🌐 **ActivityPub distribution** - Federated automatically
-4. ✅ **Verification** - Check on recipient's timeline
-5. 👀 **Cross-instance visibility** - Badge appears everywhere
-
-*Watch how a badge travels from issuer to recipient across the fediverse in real-time!*
-
----
-
-# Deploy in Minutes: Getting Started
-
-## **Docker (Recommended)**
-```bash
-docker run -d -p 5000:80 \
-  -e "MastodonConfig__Server=hachyderm.io" \
-  -e "AdminAuthentication__AdminUsers__0__Id=admin" \
-  -v $(pwd)/data:/app/data \
-  badgefed/badgefed
-```
-
-## **5-Step Setup:**
-1. Choose deployment (self-host or Community Credentials)
-2. Configure OAuth (Mastodon/LinkedIn) 
-3. Set up admin users
-4. Create badge classes
-5. **Start issuing!** - Awards federate automatically
+# Get your badge
 
 ---
 
