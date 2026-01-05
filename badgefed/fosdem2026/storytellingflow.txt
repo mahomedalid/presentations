@@ -1,0 +1,62 @@
+A few years ago, I joined a nonprofit in the US with a simple—and probably selfish—goal: to volunteer my software engineering skills while sharpening them for a good cause (and maybe feel less guilty about all those hours spent debugging instead of saving the world).
+The organization was SOMOS.tech, a nonprofit dedicated to helping Hispanic, 
+Latinx, and other marginalized communities break into the tech industry—especially 
+those coming from non-traditional backgrounds.
+
+What started as casual volunteering quickly snowballed. 
+Before I knew it, I found myself holding the CTO position. 
+Now, I don't know if you're familiar with how nonprofits operate—I certainly wasn't 
+at the time. These organizations are essentially full-fledged companies with complex 
+legal frameworks designed to avoid conflicts of interest, complete with boards of 
+directors to navigate tax implications and compliance requirements. 
+While nonprofits tackle many challenges, the most demanding aspects are
+ legal and budgetary concerns. These dominated our monthly board meetings. 
+
+My passion lay in technology, and as CTO, I believed I could contribute meaningfully to our strategic direction. We had exciting projects on the horizon, but most of our work involved maintaining existing systems—websites, content creation for hackathons, and building community tools like interview simulators and mentorship platforms. We also connected with tech industry insiders to organize meetups and conferences featuring compelling technical topics.
+
+Soon, we realized that all these activities would benefit from digital credentials and recognition. Speakers at our events deserved acknowledgment. Volunteers needed recognition for their contributions. Hackathon participants required skill verification for completing challenges. Mentors and mentees earned credentials upon completing their tenure. When we researched established credentialing systems, Credly by Pearson emerged as the market leader. We reached out to them and received a substantial quote that was far beyond our capabilities—let's just say it had more zeros than our annual budget had dollars.
+
+As CTO, I had an idea: "Why don't we build our own?" At the time, I had a vague understanding of OpenBadges and was confident we could create a website with cryptographic verification for credentials. (Famous last words of every developer ever, right?) If OpenBadges didn't meet our needs, we could build something simpler.
+
+While the board viewed this idea favorably, we had twenty or thirty higher-priority items demanding our limited volunteer hours. The credential project was relegated to the back burner—that mystical place where all the "cool tech projects" go to hibernate indefinitely.
+
+While working on side projects and after permanently migrating from Twitter to Mastodon, I became increasingly fascinated by ActivityPub—the technology powering Mastodon and other decentralized systems. But it wasn't until I federated my nearly-static blog site that I truly grasped both the challenges and transformative potential of this technology. It was thrilling.
+
+Armed with this knowledge and a clear project vision—something that wasn't just another social network clone—I decided to create BadgeFed. Now, I'm not naive. When someone has what they think is an amazing idea, there are probably dozens of people who've had the same thought or are actively working on it. (And at least three of them probably have better domain names.) Sometimes they've even brought it to production. I did my due diligence and found ActivityBadges. After attempting to set up their system and exploring it thoroughly, I still decided to create my own—it wasn't ready for SOMOS.tech's technology stack. This led me to develop BadgeFed, which combines two powerful technologies: ActivityPub and OpenBadges.
+
+Now for a confession: I love .NET. No, really—don't laugh, don't hold it against me, and please don't throw your Linux stickers at me. I genuinely believe it's a beautiful language with an elegant framework. So I built BadgeFed in .NET. I'm aware this isn't the first choice for many in the fediverse—about as popular as Internet Explorer at a web developer convention—so I made sure that if I implemented this concept, it needed to be as platform-agnostic as possible without creating new specifications. That's why I committed to building something without modifying ActivityPub or OpenBadges standards—or any established specifications—to allow others to adopt the idea, even if not the specific technology. (Because let's be honest, the last thing the world needs is another "improved" standard that everyone ignores.) That's what I'm advocating for here: I'm not selling BadgeFed the product, I'm selling the BadgeFed concept.
+
+Here's how BadgeFed works: It uses notes or documents—ActivityPub objects—and leverages one of the protocol's extensibility points: the "attachments" field. These objects are JSON-LD, as many of you know, and OpenBadges is also based on JSON-LD. Since ActivityPub is designed for online interactions, I'm not overly concerned with offline credential verification, although that remains possible.
+
+Within the attachments field, I embed an OpenBadge. The badge is linked to the ActivityPub note through the issuer—the issuer's URL/URI must match the actor's (or one of the actor's) URLs. That's it. That's my verification mechanism.
+
+If I can trust that this actor is issuing this badge, and I can visit the URL to verify it using private/public key cryptography or existing OpenBadge verification mechanisms, then I can trust the credential. The note must mention the badge recipient, who may or may not be an ActivityPub actor. This simple approach unlocks tremendous possibilities: issuers can be followed, badges can be commented on, shared, reposted, boosted, and even quoted. We've added all the social dynamics to credentials.
+
+But there's more. How do badges become decentralized? Issuers can follow other issuers—that's an ActivityPub verb. When an issuer posts a badge, other issuers receive those notes, and voilà! We have decentralized badges, distributed similarly to how notes spread across Mastodon.
+
+You can also create relays—specialized actors that exclusively boost other issuers' badges. Imagine having relays for universities or educational institutions within a country, allowing instances to receive, verify, and distribute badges between institutions virtually. Or consider gaming relays, distributing indie game achievements or all gaming accomplishments. Picture professional certification relays for specific industries, regional government credential relays, or specialized skill-based networks for trades, arts, and technical fields.
+
+This also enables the creation of a credential wallet. While this isn't dramatically different from Mozilla Backpack, it's decentralized within the fediverse. Imagine an app on your smartphone or self-hosted system that receives all your badges. If an issuer disappears, you still retain copies of all your credentials. Employers can verify them in a single location instead of visiting multiple sites—potentially on a domain you control.
+
+But here's where it gets truly exciting: this system allows any Mastodon user or fediverse account holder to issue badges. Remember, the only restriction is that the badge must link to the actor (this is simplified, as there are additional cryptographic verifications). Anyone could implement a badge issuer using the Mastodon API, or even extend this to BlueSky and other platforms.
+
+And this isn't just a proof of concept—this is real, working technology. (No, seriously, it actually works. I was as surprised as you are.)
+At SOMOS.tech, we've issued over 150 badges to speakers at our events,
+ 89 badges to participants in our mentorship programs, 
+ and we're currently setting up automatic badge issuance for our skills training 
+ programs through BadgeFed's internal API,
+  which integrates seamlessly with SOMOS.tech's existing systems. 
+  
+  Our volunteers and community members are actively sharing these 
+  credentials across the fediverse, creating genuine social proof of their achievements.
+
+Imagine the possibilities: A teacher instantly recognizing student achievements. A conference organizer acknowledging speakers and attendees. A community leader celebrating volunteer contributions. Small businesses recognizing customer loyalty. All of this happening in real-time, in a decentralized network where trust is built through transparency and cryptographic verification.
+
+What we've created isn't just a credentialing system—it's a social credentialing ecosystem. We've taken the isolation out of achievements and made them part of our connected, digital lives. No more credentials locked in corporate silos. No more wondering if your achievements will survive when platforms disappear.
+
+This is the future of recognition: decentralized, social, and owned by the communities that matter most. The question isn't whether this will transform how we think about credentials and achievements—it's whether you'll help build this future with us.
+
+Thank you.
+
+-- Any private copy is just a clone of Credly, and fighting with Credly is worthless. 
+BadgeFed concept thrives in the openess.
