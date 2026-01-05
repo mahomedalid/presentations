@@ -1,0 +1,250 @@
+/* @theme badgefed-theme */
+
+@import 'default';
+
+:root {
+  --primary-bg: #1a1a2e;
+  --secondary-bg: #16213e;
+  --accent-color: #0f3460;
+  --highlight-color: #e94560;
+  --text-light: #f5f5f5;
+  --text-accent: #4ecdc4;
+  --text-warning: #ffd93d;
+  --code-bg: #0d1117;
+  --border-color: #30363d;
+}
+
+section {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 50%, var(--accent-color) 100%);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Add subtle background pattern */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(233, 69, 96, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+section.lead {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-bg) 100%);
+  text-align: center;
+}
+
+section.lead h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--highlight-color), var(--text-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  color: var(--text-light);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  border-bottom: 3px solid var(--highlight-color);
+  padding-bottom: 15px;
+  margin-bottom: 1em;
+}
+
+h2 {
+  color: var(--text-accent);
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+h3 {
+  color: var(--text-warning);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Code blocks with GitHub dark theme inspiration */
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 20px;
+  margin: 1em 0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+code {
+  color: var(--text-accent);
+  background: rgba(13, 17, 23, 0.8);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+/* Enhanced emphasis styles */
+strong {
+  color: var(--highlight-color);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+em {
+  color: var(--text-accent);
+  font-style: italic;
+}
+
+/* Modern list styling */
+ul, ol {
+  padding-left: 2em;
+}
+
+ul li {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+ul li::marker {
+  color: var(--highlight-color);
+}
+
+/* Special emoji bullets */
+ul li:has(span[role="img"]) {
+  list-style: none;
+  margin-left: -1.5em;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--text-accent);
+  background: rgba(78, 205, 196, 0.1);
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  border-radius: 0 8px 8px 0;
+}
+
+blockquote p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Custom badge styling */
+section h1 span[title="badge"] {
+  background: linear-gradient(45deg, var(--highlight-color), var(--text-warning));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Special themed sections */
+section.activitypub {
+  background: linear-gradient(135deg, #6441a5 0%, #8e44ad 50%, var(--primary-bg) 100%);
+}
+
+section.success {
+  background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 50%, var(--primary-bg) 100%);
+  color: var(--text-light);
+}
+
+section.success h1, 
+section.success h2 {
+  color: var(--text-light);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+section.warning {
+  background: linear-gradient(135deg, #ff7b00 0%, #ff8c00 50%, var(--primary-bg) 100%);
+}
+
+/* Header and footer styling */
+header, footer {
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  background: rgba(26, 26, 46, 0.8);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+header {
+  top: 20px;
+}
+
+footer {
+  bottom: 20px;
+}
+
+/* Modern link styling */
+a {
+  color: var(--text-accent);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--highlight-color);
+  border-bottom-color: var(--highlight-color);
+  text-shadow: 0 0 8px rgba(233, 69, 96, 0.3);
+}
+
+/* Image styling */
+img {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* Mermaid diagram styling for dark theme */
+.mermaid {
+  background: rgba(13, 17, 23, 0.95);
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  text-align: left;
+}
+
+th {
+  background: var(--accent-color);
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: rgba(78, 205, 196, 0.05);
+}
+
+/* Pagination styling */
+section::after {
+  color: rgba(245, 245, 245, 0.6);
+  font-weight: 500;
+}
