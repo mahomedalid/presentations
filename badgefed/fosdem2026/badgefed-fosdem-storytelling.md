@@ -231,7 +231,6 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ---
 
-
 <!-- _class: none -->
 
 # The Magic: Social Credentials
@@ -247,9 +246,17 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ---
 
+<video src="imgs/socialaspects.mp4" controls width="80%"></video>
+
+---
+
 ### When an issuer posts a badge, 
 ## other issuers receive those notes, 
 ## and voilà! Decentralized badges.*
+
+---
+
+<video src="imgs/decentralization.mp4" controls width="80%"></video>
 
 ---
 
@@ -267,6 +274,10 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ---
 
+<video src="imgs/relay.mp4" controls width="80%"></video>
+
+--- 
+
 # The Wallet Revolution: Own Your Credentials
 
 **Decentralized credential storage:**
@@ -279,10 +290,13 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 **The Game Changer:** Any Mastodon user can issue badges using existing APIs
 
+---
+
+<video src="imgs/wallet.mp4" controls width="80%"></video>
+
 --- 
 
-# Real Impact: Not a Proof of Concept
-
+<video src="imgs/somostechbadges.mp4" controls width="80%"></video>
 
 --- 
 
@@ -352,14 +366,6 @@ footer: 'FOSDEM 2025 | badgefed.org'
 - 🌐 **Translation** for global communities
 
 **Your expertise can make a difference!**
-
----
-
-# The Vision: Social Credentialing Ecosystem
-
-![bg center 95%](social-credentialing-future.png)
-
-<!-- Alt text for image generation: A vibrant interconnected network of diverse people sharing and celebrating achievements, badges flowing freely between communities, teachers and students, conference speakers, volunteers being recognized, small businesses and customers, all connected in a decentralized web with no corporate walls or silos, achievements integrated into social feeds and daily digital life, warm community colors, empowering and inclusive future vision -->
 
 ---
 
