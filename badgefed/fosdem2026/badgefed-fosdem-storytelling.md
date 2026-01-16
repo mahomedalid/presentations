@@ -1,13 +1,20 @@
 ---
 marp: true
 theme: badgefed-theme
-class: lead
+class: invert
 paginate: true
 backgroundColor: #1a1a2e
 header: '**BadgeFed** - Decentralised Digital Badges'
 footer: 'FOSDEM 2025 | badgefed.org'
----
 
+---
+<style>
+:root {  
+  --color-prettylights-syntax-string: #cee5ffff;
+  --color-prettylights-syntax-constant: #3d98ffff;
+}
+
+</style>
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
@@ -95,6 +102,12 @@ footer: 'FOSDEM 2025 | badgefed.org'
 - 🙋 **Volunteers** needed recognition for contributions  
 - 💻 **Hackathon participants** required skill verification
 - 👥 **Mentors and mentees** earned credentials after tenure completion
+
+---
+
+<!-- _class: lead -->
+
+![bg center: 40%](imgs/credly.png)
 
 ---
 
@@ -260,7 +273,7 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ---
 
-# Federation Power: Relays & Networks
+# Federation: Relays & Networks
 
 **Specialized actors that exclusively boost badges:**
 
@@ -278,7 +291,7 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 --- 
 
-# The Wallet Revolution: Own Your Credentials
+# Wallet: Owning Your Credentials
 
 **Decentralized credential storage:**
 - 📱 **Smartphone app** or self-hosted system
@@ -300,22 +313,18 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 --- 
 
-# Security & Trust: Triple Verification
+# Security & Trust: Verification
 
 ## **Comprehensive Security Model**
 
 1. **ActivityPub Signatures** - HTTP signatures verify sender authenticity
-2. **OpenBadge Signatures** - Cryptographic integrity of badge data  
+2. **OpenBadge Signatures** - Cryptographic integrity of badge data 
 3. **Actor-Issuer Linking** - Badge issuer URL must match ActivityPub actor
 
 ## **Recipient Protection**
 - Recipients must be mentioned in ActivityPub Note
 - Prevents badge spoofing and misattribution
 - Federated identity verification across platforms
-
----
-
-# Get your badge
 
 ---
 
@@ -328,6 +337,10 @@ footer: 'FOSDEM 2025 | badgefed.org'
 - **Documentation:** Help others understand and implement
 - **API Extensions:** Build new federation capabilities
 
+---
+
+# How YOU Can Build This Future
+
 ## **🏛️ As an Organization**
 - **Deploy:** Use BadgeFed for your community
 - **Join Network:** Connect with Community Credentials
@@ -336,106 +349,38 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ---
 
-# Community & Resources
-
-## **Get Started Today**
-- 🚀 **GitHub:** `github.com/tryvocalcat/badgefed`
-- 🏛️ **Hosted Support:** `communitycredentials.org`
-- 💬 **Community:** Matrix/Discord channels for developers
-- 📖 **Documentation:** Complete setup guides and API references
-
-## **Join the Movement**
-- **Blog:** `badgefed.vocalcat.com` - Latest updates and insights
-- **SOMOS.tech:** `somos.tech` - Supporting Latino tech communities
-- **Demo Instance:** Try it live at `demo.communitycredentials.org`
+## **As a Supporter**
+### get your Badge
+# badgefed.org/get/fosdem26
 
 ---
 
-# Current Challenges: Help Us Solve These
+# Current Challenges: Help Us
 
-## **Technical Challenges**
 - 🔍 **Federation scaling** - Discovery across large networks
 - 🔎 **Search & discovery** - Cross-instance badge search
 - 🆔 **Identity portability** - Moving credentials between platforms
 - 🛡️ **Moderation & trust** - Preventing spam and building reputation
 
-## **Community Needs**
-- 📚 **More documentation** and tutorials
-- 🎨 **Better themes** and user interfaces
-- 🔌 **Platform integrations** (GitHub, GitLab, Discord)
-- 🌐 **Translation** for global communities
-
-**Your expertise can make a difference!**
-
 ---
 
-# Use Cases: Beyond Nonprofits
-
-## **Educational Institutions**
-- 🎓 Student achievement tracking and portfolio building
-- 📜 Continuing education credits and professional development
-- 🔬 Research participation and academic contributions
-
-## **Professional Communities** 
-- 🎤 Conference attendance and speaker recognition
-- 🏆 Skill certifications and competency validation
-- 🤝 Community contributions and volunteer hours
-
-## **Corporate & Training**
-- 👔 Employee development and career progression
-- ✅ Compliance tracking and mandatory training
-- 🏅 Internal recognition and achievement systems
-
----
-
-# Future Roadmap: What's Next
-
-## **Short Term (2025)**
-- 🔍 **Enhanced search** across federation networks
-- 🏷️ **Badge collections** and digital portfolios
-- 🔗 **Improved identity linking** and verification systems
-
-## **Medium Term**
-- 🤖 **AI-powered badge recommendations** and automation
-- 📊 **Advanced analytics** for organizations and issuers
-- 🌉 **Bridge integrations** with existing credential platforms
-
-## **Long Term** 
-- 🆔 **Decentralized identity** (DID) integration
-- ⛓️ **Blockchain anchoring** for immutable records
-- 🏛️ **Governance frameworks** for federation networks
-
----
-
-# The Call to Action
-
-**This is the future of recognition:** 
+# Recognition: Our Future
 - 🌐 **Decentralized** - No single point of failure
 - 🤝 **Social** - Integrated with how we communicate  
 - 👥 **Community-owned** - Controlled by those who matter most
 
-**The question isn't whether this will transform how we think about credentials and achievements—it's whether you'll help build this future with us.**
-
-**Start today:**
-- Fork the repo and contribute code
-- Deploy an instance for your community  
-- Join our developer community
-- Share your ideas and use cases
+**The question isn't whether this will transform how we think about credentials and achievements, it's whether you'll help build this future with us.**
 
 ---
 
-![bg left:40% 80%](https://raw.githubusercontent.com/activitypub/activitypub/master/activitypub-logo.png)
+![bg left:40% 80%](https://badgefed.vocalcat.com/images/avatar.png)
 
 # Thank You!
 
-## **Let's Build the Future of Credentials Together**
-
-🌐 **github.com/tryvocalcat/badgefed**  
+🌐 **badgefed.org**  
 🏛️ **communitycredentials.org**  
 🤝 **somos.tech**  
-💬 **Join our community channels**
-
-*Questions? Let's federate some credentials and start the revolution!*
+💬 **badgefed.org/get/fosdem26**
 
 ---
 
