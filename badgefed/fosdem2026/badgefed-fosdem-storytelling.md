@@ -5,7 +5,7 @@ class: invert
 paginate: true
 backgroundColor: #1a1a2e
 header: '**BadgeFed** - Decentralised Digital Badges'
-footer: 'FOSDEM 2025 | badgefed.org'
+footer: 'FOSDEM 2026 | badgefed.org'
 
 ---
 <style>
@@ -24,7 +24,7 @@ footer: 'FOSDEM 2025 | badgefed.org'
 
 ## Building the Interoperable Credentialing System We Deserved
 
-**FOSDEM 2025**  
+**FOSDEM 2026**  
 
 ---
 
